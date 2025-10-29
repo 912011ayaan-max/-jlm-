@@ -40,9 +40,9 @@
     })();
 
     const savedApi = localStorage.getItem('admin_api_base');
-    const isHttpsPage = window.location.protocol === 'https:';
-    const defaultApi = isHttpsPage ? `${window.location.origin}/api` : 'http://localhost:3001/api';
-    let API_BASE = (savedApi || defaultApi).replace(/\/$/, '');
+const isHttpsPage = window.location.protocol === 'https:';
+const defaultApi = isHttpsPage ? 'https://jlm-rose.vercel.app/api' : 'http://localhost:3001/api';
+let API_BASE = (savedApi || defaultApi).replace(/\/$/, '');
 
     function setApiBase(v) {
       try {
